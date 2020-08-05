@@ -10,6 +10,8 @@ sudo systemctl enable docker
 
 sudo docker info
 
+sudo su -
+
 sudo cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
@@ -20,6 +22,8 @@ sudo cat > /etc/docker/daemon.json <<EOF
   "storage-driver": "overlay2"
 }
 EOF
+
+exit
 
 sudo sed -i '$ s/$/ cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 swapaccount=1/' /boot/firmware/cmdline.txt
 
