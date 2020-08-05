@@ -12,7 +12,7 @@ sudo docker info
 
 sudo su -
 
-sudo cat > /etc/docker/daemon.json <<EOF
+cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "log-driver": "json-file",
