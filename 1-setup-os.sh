@@ -8,8 +8,6 @@ sudo apt-get install -y docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 
-sudo docker info
-
 sudo su -
 
 cat > /etc/docker/daemon.json <<EOF
@@ -33,3 +31,5 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 
 sudo sysctl --system
+
+sudo docker info
