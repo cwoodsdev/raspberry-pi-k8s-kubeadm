@@ -29,3 +29,6 @@ EOF
 sudo sysctl --system
 
 sudo docker info
+
+sudo apt-get install conntrack
+
